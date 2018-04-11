@@ -1,0 +1,22 @@
+clc; close all; 
+SelStr = 'bat-2'; 
+DataDir = sprintf('./%s.gif', SelStr); % './bat-2.gif'; 
+MdataSource= imread(DataDir);
+MDataSource = edge(MdataSource,'sobel');
+[X, Y] = find(MDataSource==1);
+Ref = [X Y]';
+Ref= Ref(:,1:2:end);
+
+Ang = deg2rad([30.0 0.0 0.0]); 
+R = eul2rotm(Ang); 
+R = R(1:2, 1:2); 
+T = zeros(2, 1); 
+Mov = Loc2Glo(Ref, R', T); 
+Mov = Mov + rand(size(Mov)); 
+SelStr = 'bat-3'; 
+DataDir = sprintf('./%s.gif', SelStr); % './bat-2.gif'; 
+MdataSource= imread(DataDir);
+MDataSource = edge(MdataSource,'sobel');
+[X, Y] = find(MDataSource==1);
+Mov = [X Y]';
+Mov = Mov(:,1:2:end);
