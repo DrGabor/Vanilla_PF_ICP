@@ -4,7 +4,7 @@ Iterative closest point via particle filtering.
 This code is basically used for 2D/3D point set registration, and the registration process is modelled as a state estimation problem, which can be solved efficiently via filtering techiniques, like UKF, CKF and particle filter.
 
 To understand the theory, the readers are referred to [1][2][3]. Also, it is good to refer these two articles if you use this code.
-Special thanks goes to Jihua ZHU, who provided me with the code of particle filter; And also thanks for Dr. Liang LI, who discussed with me for technique details.
+Special thanks goes to Jihua ZHU, who provided me with the code of particle filter; And also thanks goes to Dr. Liang LI, who discussed with me for technique details including motion alignment error and density proposal. 
 
 Please make sure that you also add "LiDAR/CommonFunctions" to your matlab PATH, which provide functions relating to coordinate transformation.
 
